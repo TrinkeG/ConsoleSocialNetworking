@@ -29,7 +29,7 @@ namespace ConsoleSocialNetworking
         public string GetMessageString()
         {
            TimeFormatter formatter = new TimeFormatter();
-            return $"{Message} ({formatter.formatTimeStamp(DatePosted)})";
+            return $"{Message} ({formatter.FormatTimeStamp(DatePosted)})";
         }
     }
 }

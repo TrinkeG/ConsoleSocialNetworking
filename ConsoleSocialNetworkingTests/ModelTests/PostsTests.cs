@@ -18,7 +18,7 @@ namespace ConsoleSocialNetworkingTests
             //Time has a public accessor to enable this testing. This may be a bad idea? 
             //ToDo: post doesnt care how it is formatted >.<  Also wallformat is different!!
             var post = new Post("This is a test post","christina ");
-            Assert.AreEqual(post.GetMessageString(), "This is a test post (just now)");
+            Assert.AreEqual( "This is a test post (just now)", post.GetMessageString());
             post.DatePosted= post.DatePosted.AddMinutes(-1);
             Assert.AreEqual(post.GetMessageString(), "This is a test post (1 minute ago)");
             post.DatePosted = post.DatePosted.AddMinutes(-2);

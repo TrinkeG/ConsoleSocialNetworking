@@ -54,6 +54,7 @@
     <Compile Include="ModelTests\UserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ModelTests\DeckTests.cs" />
+    <Compile Include="UtilitiesTests\TimeFormatterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConsoleSocialNetworking\ConsoleSocialNetworking.csproj">
