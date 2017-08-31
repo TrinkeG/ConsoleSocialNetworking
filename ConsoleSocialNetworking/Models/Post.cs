@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleSocialNetworking.Utilities;
 
 namespace ConsoleSocialNetworking
 {
@@ -27,19 +28,8 @@ namespace ConsoleSocialNetworking
         
         public string GetMessageString()
         {
-            TimeSpan test = DateTime.Now.ToUniversalTime() - DatePosted;
-            var minutesSince = test.Minutes;
-            string time;
-            if (minutesSince <= 0) time = "just now";
-            else if (minutesSince == 1)
-            {
-                time = $"{minutesSince} minute ago";
-            }
-            else
-            {
-                time = $"{minutesSince} minutes ago";
-            }
-            return $"{Message} ({time})";
+           TimeFormatter formatter = new TimeFormatter();
+            return $"{Message} ({formatter.formatTimeStamp(DatePosted)})";
         }
     }
 }
