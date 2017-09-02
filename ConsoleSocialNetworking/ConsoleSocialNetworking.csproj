@@ -43,11 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\ReadCommand.cs" />
     <Compile Include="Models\Deck.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Utilities\ConsoleWriter.cs" />
+    <Compile Include="Utilities\IOutputWriter.cs" />
+    <Compile Include="Utilities\TestWriter.cs" />
     <Compile Include="Utilities\TimeFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
