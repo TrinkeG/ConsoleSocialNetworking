@@ -9,18 +9,16 @@ namespace ConsoleSocialNetworking.Commands
 {
     public class PostCommand : Command
     {
-        private readonly string[] _commandParts;
         private readonly Deck _deck;
-        public PostCommand(Deck deck, string commandString) : base(commandString)
+        public PostCommand(Deck deck)
         {
-            _commandParts = commandString.Split(new[] {" -> "}, StringSplitOptions.None);
             _deck = deck;
         }
-
-        public override string RegexPattern { get; } = @"\w+ -> ([\w+])*";
-        public override void Execute()
+        
+        public override void Execute(string commandString)
         {
-            _deck.AddPost(_commandParts[0],_commandParts[1]);
+            string[] commandParts = commandString.Split(new[] { " -> " }, StringSplitOptions.None);
+            _deck.AddPost(commandParts[0],commandParts[1]);
         }
     }
 }

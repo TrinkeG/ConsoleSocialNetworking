@@ -12,31 +12,26 @@ namespace ConsoleSocialNetworking.Commands
     public class ReadCommand : Command
     {
         private readonly Deck _deck;
-        private readonly string _commandString;
-
-        private const string RgxPattern = @"^\w+$";
         private readonly IOutputWriter _writer;
 
-        public ReadCommand(Deck deck, string commandString, IOutputWriter writer) : base(commandString)
+        public ReadCommand(Deck deck, IOutputWriter writer) 
         {
             _deck = deck;
-            _commandString = commandString;
             _writer = writer;
         }
         
 
         public List<Post> Posts { get; set; }
 
-        public override void Execute()
+        public override void Execute(string commandString)
         {
-            Posts = _deck.Read(_commandString);
+            Posts = _deck.Read(commandString);
             foreach (var post in Posts)
             {
                 _writer.WriteLine(post.GetMessageString());
             }
         }
 
-
-        public  override string RegexPattern { get; } = RgxPattern;
+        
     }
 }
