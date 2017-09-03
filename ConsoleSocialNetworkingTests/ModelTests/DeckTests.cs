@@ -37,6 +37,22 @@ namespace ConsoleSocialNetworkingTests
         }
 
         [TestMethod]
+        public void TestWallContainsUsersOwnPosts()
+        {
+            var deck = new Deck();
+            deck.AddFollows("Christina", "Bob");
+            var bob = deck.GetCreateUser("Bob");
+            bob.AddPost("This is bob post one");
+            bob.AddPost("This is bob post two");
+            deck.AddFollows("Christina", "Dylan");
+            var dylan = deck.GetCreateUser("Dylan");
+            dylan.AddPost("This is Dylan post one");
+            var christina = deck.GetCreateUser("Christina");
+            christina.AddPost("This is my own post");
+            Assert.IsTrue(deck.Wall("Christina").Exists(p=>p.Message== "This is my own post"));
+        }
+
+        [TestMethod]
         public void TestReadReturnsPosts()
         {
             var deck = new Deck();

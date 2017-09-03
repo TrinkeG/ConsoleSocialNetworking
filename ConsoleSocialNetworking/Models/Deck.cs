@@ -27,8 +27,8 @@ namespace ConsoleSocialNetworking.Models
 
         public List<Post> Wall(string userName)
         {
-            var posts = new List<Post>();
             var user = GetCreateUser(userName);
+            var posts = user.Posts.;
             foreach (var followedUser in user.FollowedUsers)
             {
                 posts.AddRange(followedUser.Posts);

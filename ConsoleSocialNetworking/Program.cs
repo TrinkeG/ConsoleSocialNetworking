@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleSocialNetworking.Commands;
 
 namespace ConsoleSocialNetworking
 {
     class Program
     {
+        private static string Prompt = "> ";
         static void Main(string[] args)
         {
-            bool running = true;
-            while (running)
+            CommandRunner runner = new CommandRunner();
+            while (true)
             {
+                Console.Write(Prompt);
                 string command = Console.ReadLine();
-                if (command != null && command.Equals("exit"))
-                {
-                    running = false;
-                }
+                runner.ExecuteCommand(command);
             }
         }
     }

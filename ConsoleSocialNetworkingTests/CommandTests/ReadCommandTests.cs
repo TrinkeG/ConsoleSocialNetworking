@@ -43,17 +43,6 @@ namespace ConsoleSocialNetworkingTests.CommandTests
             Assert.AreEqual(3, testWriter.WrittenLines.Count);
 
         }
-
-        /*[TestMethod]
-        public void TestReadCommandMatchesRegex()
-        {
-            var deck = new Deck();
-            var writer = new ConsoleWriter();
-            var readCommand = new ReadCommand(deck,"Christina",writer);
-            Assert.IsTrue(readCommand.MatchesCommandString());
-
-            readCommand = new ReadCommand(deck, "Christina bla bla",writer);
-            Assert.IsFalse(readCommand.MatchesCommandString());
-        }*/
+        
     }
 }
