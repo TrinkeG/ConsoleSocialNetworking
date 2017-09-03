@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleSocialNetworking.Utilities
 {
-    class ConsoleWriter : IOutputWriter
+    public class ConsoleWriter : IOutputWriter
     {
         public void WriteLine(string line)
         {

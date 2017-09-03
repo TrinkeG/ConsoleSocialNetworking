@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ConsoleSocialNetworking.Models;
+using ConsoleSocialNetworking.Utilities;
 
 namespace ConsoleSocialNetworking.Commands
 {
@@ -14,19 +15,25 @@ namespace ConsoleSocialNetworking.Commands
         private readonly string _commandString;
 
         private const string RgxPattern = @"^\w+$";
+        private readonly IOutputWriter _writer;
 
-
-        public ReadCommand(Deck deck, string commandString) : base(commandString)
+        public ReadCommand(Deck deck, string commandString, IOutputWriter writer) : base(commandString)
         {
             _deck = deck;
             _commandString = commandString;
+            _writer = writer;
         }
+        
 
         public List<Post> Posts { get; set; }
 
-        public void Execute()
+        public override void Execute()
         {
             Posts = _deck.Read(_commandString);
+            foreach (var post in Posts)
+            {
+                _writer.WriteLine(post.GetMessageString());
+            }
         }
 
 

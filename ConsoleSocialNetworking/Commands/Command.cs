@@ -22,5 +22,7 @@ namespace ConsoleSocialNetworking.Commands
         {
             return Regex.Match(_commandString, RegexPattern).Success;
         }
+
+        public abstract void Execute();
     }
 }
