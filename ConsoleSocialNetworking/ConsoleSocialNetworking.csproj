@@ -47,6 +47,7 @@
     <Compile Include="Commands\FollowCommand.cs" />
     <Compile Include="Commands\PostCommand.cs" />
     <Compile Include="Commands\ReadCommand.cs" />
+    <Compile Include="Commands\WallCommand.cs" />
     <Compile Include="Models\Deck.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Program.cs" />

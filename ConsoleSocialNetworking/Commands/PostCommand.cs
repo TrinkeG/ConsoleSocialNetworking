@@ -9,7 +9,7 @@ namespace ConsoleSocialNetworking.Commands
 {
     public class PostCommand : Command
     {
-        private string[] _commandParts;
+        private readonly string[] _commandParts;
         private readonly Deck _deck;
         public PostCommand(Deck deck, string commandString) : base(commandString)
         {
