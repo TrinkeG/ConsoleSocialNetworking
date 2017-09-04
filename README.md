@@ -28,7 +28,7 @@ I love the weather today (5 minutes ago)
 Good game though. (1 minute ago)
 
 Damn! We lost! (2 minutes ago)
-### Following: Charlie can subscribe to A​lice’s and B​ob’s timelines, and view an aggregated list of all
+### Following: Charlie can subscribe to Alice’s and Bob’s timelines, and view an aggregated list of all
 subscriptions
 \> Charlie -> I'm in New York today! Anyone want to have a coffee?
 
@@ -51,3 +51,14 @@ Bob - Good game though. (1 minute ago)
 Bob - Damn! We lost! (2 minutes ago)
 
 Alice - I love the weather today (5 minutes ago)
+
+## Command Format
+**Follow:** {Username} follows {Username} **example:** Alice follows Bob
+
+**Post:** {Username} -> {PostText} **example:** Alice -> Lovely weather today!
+
+**Read:** {Username} **example:** Alice
+
+**Wall:** {Username} wall **example:** Alice wall
+
+**Exit:** exit
