@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleSocialNetworking
 {
-    public class User
+    public class User : IEquatable<User>
     {
         private readonly string _userName;
         public List<Post> Posts = new List<Post>();
@@ -34,10 +34,15 @@ namespace ConsoleSocialNetworking
         {
             return _userName;
         }
-
-        public override bool Equals(object obj)
+        
+        public override int GetHashCode()
         {
-            var user = (User) obj;
+            return _userName?.GetHashCode() ?? 0;
+        }
+
+        public bool Equals(User other)
+        {
+            var user = other;
             return user != null && user.GetUserName().Equals(_userName);
         }
     }
