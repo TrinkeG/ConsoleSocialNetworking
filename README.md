@@ -9,7 +9,7 @@ Download Repository
 ### Opt 2:
 - Download MSBuild for VS2015 
 - Open MSBuild Command prompt and cd to repository directory ConsoleSocialNetworking Folder
-- run MSBuild.exe /t:Build /p:Configuration=Release ConsoleSocialNetworking.csproj
+- run `MSBuild.exe /t:Build /p:Configuration=Release /p:OutputPath={selected output directory} ConsoleSocialNetworking.csproj`
 - Navigate to bin/release directory and run ConsoleSocialNetworking.exe
 ## How to Use
 ### Posting: Alice can publish messages to a personal timeline
