@@ -47,6 +47,7 @@
     <Compile Include="Commands\CommandRunner.cs" />
     <Compile Include="Commands\ExitCommand.cs" />
     <Compile Include="Commands\FollowCommand.cs" />
+    <Compile Include="Commands\InvalidCommand.cs" />
     <Compile Include="Commands\PostCommand.cs" />
     <Compile Include="Commands\ReadCommand.cs" />
     <Compile Include="Commands\WallCommand.cs" />

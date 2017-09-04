@@ -13,23 +13,24 @@ namespace ConsoleSocialNetworking.Commands
     {
 
         public readonly Dictionary<string, Command> RegexCommands;
-
+        readonly IOutputWriter _writer = new ConsoleWriter();
         public CommandRunner()
         {
             var deck = new Deck();
-            var writer = new ConsoleWriter();
             RegexCommands = new Dictionary<string, Command>
             {
                 {@"\w+ -> ([\w+])*", new PostCommand(deck)},
                 {@"^exit$", new ExitCommand()},
                 {@"\w+ follows \w+", new FollowCommand(deck)},
-                {@"^\w+$", new ReadCommand(deck, writer)},
-                {@"\w+ wall", new WallCommand(deck, writer)}
+                {@"^\w+$", new ReadCommand(deck, _writer)},
+                {@"\w+ wall", new WallCommand(deck, _writer)}
             };
         }
         public void ExecuteCommand(string commandString)
         {
-            var command = RegexCommands.FirstOrDefault(c => MatchesCommandString(commandString,c.Key)).Value;
+            //If it doesn't match regex in dictionary it is an invalid command
+            var command = RegexCommands.FirstOrDefault(c => MatchesCommandString(commandString,c.Key)).Value ??
+                          new InvalidCommand(_writer);
             command.Execute(commandString);
         }
 
