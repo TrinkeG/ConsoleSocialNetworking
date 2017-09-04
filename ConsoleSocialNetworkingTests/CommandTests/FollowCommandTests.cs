@@ -10,18 +10,6 @@ namespace ConsoleSocialNetworkingTests.CommandTests
     [TestClass]
     public class FollowCommandTests
     {
-
-        /*[TestMethod]
-        public void TestFollowCommandMatchesRegex()
-        {
-            var deck = new Deck();
-            var followCommand = new FollowCommand(deck, "Christina follows Bob");
-            Assert.IsTrue(followCommand.MatchesCommandString());
-
-            followCommand = new FollowCommand(deck, "Christina bla bla");
-            Assert.IsFalse(followCommand.MatchesCommandString());
-        }*/
-
         [TestMethod]
         public void TestFollowCommandAddsFollowers()
         {

@@ -14,17 +14,6 @@ namespace ConsoleSocialNetworkingTests.CommandTests
     public class WallCommandTests
     {
 
-        /*[TestMethod]
-        public void TestWallCommandMatchesRegex()
-        {
-            var testWriter = new TestWriter();
-            var deck = new Deck();
-            var wallCommand = new WallCommand(deck, "Alice wall", testWriter);
-            Assert.IsTrue(wallCommand.MatchesCommandString());
-
-            wallCommand = new WallCommand(deck, "Christina follows Alice", testWriter);
-            Assert.IsFalse(wallCommand.MatchesCommandString());
-        }*/
 
         [TestMethod]
         public void TestWallCommandDeckHasPosts()

@@ -28,12 +28,13 @@ namespace ConsoleSocialNetworking.Models
         public List<Post> Wall(string userName)
         {
             var user = GetCreateUser(userName);
-            var posts = user.Posts;
+            var posts = new List<Post>(user.Posts);
             foreach (var followedUser in user.FollowedUsers)
             {
                 posts.AddRange(followedUser.Posts);
             }
-            return posts;
+            var orderedPosts = posts.OrderBy(p => p.DatePosted.ToFileTimeUtc()).ToList();
+            return orderedPosts;
         }
 
         public List<Post> Read(string userName)

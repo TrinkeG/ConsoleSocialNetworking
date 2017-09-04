@@ -50,7 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CommandTests\ExitCommandTests.cs" />
+    <Compile Include="CommandTests\CommandRunnerTests.cs" />
     <Compile Include="CommandTests\FollowCommandTests.cs" />
     <Compile Include="CommandTests\PostCommandTests.cs" />
     <Compile Include="CommandTests\ReadCommandTests.cs" />

@@ -14,7 +14,6 @@ namespace ConsoleSocialNetworking.Commands
         public FollowCommand(Deck deck)
         {
             _deck = deck;
-
         }
         
         public override void Execute(string stringCommand)

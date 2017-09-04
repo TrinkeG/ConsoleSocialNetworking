@@ -13,17 +13,7 @@ namespace ConsoleSocialNetworkingTests.CommandTests
     [TestClass]
     public class PostCommandTests
     {
-
-        /*[TestMethod]
-        public void TestPostCommandMatchesRegex()
-        {
-            var deck = new Deck();
-            var postCommand = new PostCommand(deck, "Alice -> I Love the weather today");
-            Assert.IsTrue(postCommand.MatchesCommandString());
-
-            postCommand = new PostCommand(deck, "Christina follows Alice");
-            Assert.IsFalse(postCommand.MatchesCommandString());
-        }*/
+        
 
         [TestMethod]
         public void TestPostCommandAddsNewPosts()

@@ -28,7 +28,7 @@ namespace ConsoleSocialNetworking
         
         public string GetMessageString()
         {
-           TimeFormatter formatter = new TimeFormatter();
+            var formatter = new TimeFormatter();
             return $"{Message} ({formatter.FormatTimeStamp(DatePosted)})";
         }
     }

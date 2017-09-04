@@ -11,19 +11,14 @@ namespace ConsoleSocialNetworking.Commands
 {
     public class CommandRunner
     {
-        private const string PostRegex =  @"\w+ -> ([\w+])*";
-        private const string ExitRegex = @"^exit$";
-        private const string FollowRegex = @"\w+ follows \w+";
-        private const string ReadRegex = @"^\w+$";
-        private const string WallRegex = @"\w+ wall";
 
-        private readonly Dictionary<string, Command> _regexCommands;
+        public readonly Dictionary<string, Command> RegexCommands;
 
         public CommandRunner()
         {
             var deck = new Deck();
             var writer = new ConsoleWriter();
-            _regexCommands = new Dictionary<string, Command>
+            RegexCommands = new Dictionary<string, Command>
             {
                 {@"\w+ -> ([\w+])*", new PostCommand(deck)},
                 {@"^exit$", new ExitCommand()},
@@ -34,7 +29,7 @@ namespace ConsoleSocialNetworking.Commands
         }
         public void ExecuteCommand(string commandString)
         {
-            var command = _regexCommands.FirstOrDefault(c => MatchesCommandString(commandString,c.Key)).Value;
+            var command = RegexCommands.FirstOrDefault(c => MatchesCommandString(commandString,c.Key)).Value;
             command.Execute(commandString);
         }
 

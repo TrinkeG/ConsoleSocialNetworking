@@ -9,7 +9,8 @@ namespace ConsoleSocialNetworking
 {
     class Program
     {
-        private static string Prompt = "> ";
+        private const string Prompt = "> ";
+
         static void Main(string[] args)
         {
             CommandRunner runner = new CommandRunner();
