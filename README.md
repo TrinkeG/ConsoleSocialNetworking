@@ -12,53 +12,54 @@ Download Repository
 - run `MSBuild.exe /t:Build /p:Configuration=Release /p:OutputPath={selected output directory} ConsoleSocialNetworking.csproj`
 - Navigate to bin/release directory and run ConsoleSocialNetworking.exe
 ## How to Use
+
+### Command Format
+**Follow:** {Username} follows {Username} **example:** `Alice follows Bob`
+
+**Post:** {Username} -> {PostText} **example:** `Alice -> Lovely weather today!`
+
+**Read:** {Username} **example:** `Alice`
+
+**Wall:** {Username} wall **example:** `Alice wall`
+
+**Exit:** `exit`
+
 ### Posting: Alice can publish messages to a personal timeline
-\> Alice -> I love the weather today
+`> Alice -> I love the weather today`
 
-\> Bob -> Damn! We lost!
+`> Bob -> Damn! We lost!`
 
-\> Bob -> Good game though.
+`> Bob -> Good game though.`
 ### Reading: I can view Alice and Bob’s timelines
-\> Alice
+`> Alice`
 
-I love the weather today (5 minutes ago)
+`I love the weather today (5 minutes ago)`
 
-\> Bob
+`> Bob`
 
-Good game though. (1 minute ago)
+`Good game though. (1 minute ago)`
 
-Damn! We lost! (2 minutes ago)
-### Following: Charlie can subscribe to Alice’s and Bob’s timelines, and view an aggregated list of all
-subscriptions
-\> Charlie -> I'm in New York today! Anyone want to have a coffee?
+`Damn! We lost! (2 minutes ago)`
+### Following: Charlie can subscribe to Alice’s and Bob’s timelines, and view an aggregated list of all subscriptions
+`> Charlie -> I'm in New York today! Anyone want to have a coffee?`
 
-\> Charlie follows Alice
+`> Charlie follows Alice`
 
-\> Charlie wall
+`> Charlie wall`
 
-Charlie - I'm in New York today! Anyone want to have a coffee? (2 seconds ago)
+`Charlie - I'm in New York today! Anyone want to have a coffee? (2 seconds ago)`
 
-Alice - I love the weather today (5 minutes ago)
+`Alice - I love the weather today (5 minutes ago)`
 
-\> Charlie follows Bob
+`> Charlie follows Bob`
 
-\> Charlie wall
+`> Charlie wall`
 
-Charlie - I'm in New York today! Anyone wants to have a coffee? (15 seconds ago)
+`Charlie - I'm in New York today! Anyone wants to have a coffee? (15 seconds ago)`
 
-Bob - Good game though. (1 minute ago)
+`Bob - Good game though. (1 minute ago)`
 
-Bob - Damn! We lost! (2 minutes ago)
+`Bob - Damn! We lost! (2 minutes ago)`
 
-Alice - I love the weather today (5 minutes ago)
+`Alice - I love the weather today (5 minutes ago)`
 
-## Command Format
-**Follow:** {Username} follows {Username} **example:** Alice follows Bob
-
-**Post:** {Username} -> {PostText} **example:** Alice -> Lovely weather today!
-
-**Read:** {Username} **example:** Alice
-
-**Wall:** {Username} wall **example:** Alice wall
-
-**Exit:** exit
